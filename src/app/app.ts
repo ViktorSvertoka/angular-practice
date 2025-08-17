@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,10 +8,14 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss',
 })
 export class App {
-  title = 'angular-practice';
-  subtitle = 'my-practice';
+  title = 'Angular practice';
+  subtitle = 'my practice';
 
   changeTitle() {
-    this.title = 'Super practice';
+    if (this.title === 'Angular practice') {
+      this.title = 'Super practice';
+    } else {
+      this.title = 'Angular practice';
+    }
   }
 }
