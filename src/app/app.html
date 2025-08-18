@@ -1,6 +1,7 @@
 <main class="main">
   <h1>Hello, {{ title }}</h1>
   <p>{{ subtitle }}</p>
+  <input *ngIf="isShowInput" type="text" [(ngModel)]="title" />
   <button (click)="changeTitle()">Click</button>
 </main>
 
