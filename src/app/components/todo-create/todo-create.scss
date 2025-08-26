@@ -1,0 +1,29 @@
+.todo-form-container {
+  padding: 1rem;
+
+  .todo-form-title {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .todo-form-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+    mat-form-field {
+      flex: 1 1 auto;
+      min-width: 200px;
+    }
+
+    .todo-title-field {
+      flex: 0 0 50%;
+    }
+
+    button.todo-submit-btn {
+      align-self: flex-end;
+      margin-top: 1.5rem;
+    }
+  }
+}

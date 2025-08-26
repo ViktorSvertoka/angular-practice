@@ -1,0 +1,32 @@
+<div class="todo-form-container">
+  <p class="todo-form-title">Create To-Do</p>
+
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <div class="todo-form-row">
+      <mat-form-field appearance="outline" class="todo-title-field">
+        <input matInput type="text" placeholder="Type anything..." formControlName="title" />
+        <mat-hint>Type the todo title</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="todo-date-field">
+        <input matInput [matDatepicker]="dp" formControlName="dueDate" />
+        <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker #dp></mat-datepicker>
+        <mat-hint>Select due date</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="todo-priority-field">
+        <mat-select formControlName="priority">
+          <mat-option value="High">High</mat-option>
+          <mat-option value="Medium">Medium</mat-option>
+          <mat-option value="Low">Low</mat-option>
+        </mat-select>
+        <mat-hint>Type the todo priority</mat-hint>
+      </mat-form-field>
+
+      <button type="submit" mat-fab color="primary" class="todo-submit-btn">
+        <mat-icon>check</mat-icon>
+      </button>
+    </div>
+  </form>
+</div>

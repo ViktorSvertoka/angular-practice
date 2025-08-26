@@ -1,25 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, CommonModule],
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  title = 'Angular practice';
-  subtitle = 'My practice';
-
-  isShowInput = true;
-
-  changeTitle() {
-    if (this.title === 'Angular practice') {
-      this.title = 'Super practice';
-    } else {
-      this.title = 'Angular practice';
-    }
-  }
+  title = 'angular-firestore-todo-app';
 }
